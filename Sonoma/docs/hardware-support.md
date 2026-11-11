@@ -21,7 +21,7 @@ Statuses use: **Working** (verified on the laptop) · **Partial** ·
 | USB ports | Working | UTBMap (Dell-specific map) |
 | Sleep / wake | Untested | — |
 | HDMI output | **Not working** | HDMI is wired to the NVIDIA dGPU, which is disabled; verified — connecting a TV detects no external display |
-| Webcam | Untested | enumerates as USB UVC |
+| Webcam | **Pipeline working — sensor defective** | native UVC, no kext; streams 1280×720 frames, but the sensor captures black even on Windows (hardware defect) |
 | SD reader (Realtek RTS, PCIe) | Working | verified with a 4 GB FAT32 card — mounts via RealtekCardReader |
 | NVIDIA GTX 1050 | Not working | Pascal has no macOS driver; disabled |
 
