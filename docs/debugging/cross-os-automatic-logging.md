@@ -15,6 +15,11 @@ the operating system depends on them, and a normal installation does not need
 them. Install them for a specific investigation and remove them when it is
 finished (see [Removing](#removing)).
 
+Reusable, sanitized versions of the scripts and their launchd jobs live in
+[`tools/diagnostics/`](../../tools/diagnostics/README.md) — that directory has
+the install, configure and uninstall instructions; this page describes the
+approach and what it found.
+
 ## Design
 
 | Service | Type | Runs | Captures |

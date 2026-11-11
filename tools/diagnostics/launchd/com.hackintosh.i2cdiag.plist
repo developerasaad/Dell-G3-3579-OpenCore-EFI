@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.hackintosh.i2cdiag</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/bin/bash</string>
+		<string>/usr/local/bin/i2cdiag.sh</string>
+	</array>
+	<key>EnvironmentVariables</key>
+	<dict>
+		<key>DIAG_OUTDIR</key>
+		<string>/Library/Logs/hackdiag</string>
+		<key>DIAG_USER</key>
+		<string>CHANGE_ME</string>
+	</dict>
+	<key>RunAtLoad</key>
+	<true/>
+	<key>UserName</key>
+	<string>root</string>
+	<key>StandardOutPath</key>
+	<string>/var/log/i2cdiag.out</string>
+	<key>StandardErrorPath</key>
+	<string>/var/log/i2cdiag.err</string>
+	<key>ThrottleInterval</key>
+	<integer>10</integer>
+</dict>
+</plist>
