@@ -22,7 +22,7 @@ Statuses use: **Working** (verified on the laptop) · **Partial** ·
 | Sleep / wake | Untested | — |
 | HDMI | Untested | likely wired to the disabled dGPU |
 | Webcam | Untested | enumerates as USB UVC |
-| SD reader (Realtek USB) | Untested | native USB mass storage |
+| SD reader (Realtek RTS, PCIe) | Working | verified with a 4 GB FAT32 card — mounts via RealtekCardReader |
 | NVIDIA GTX 1050 | Not working | Pascal has no macOS driver; disabled |
 
 See [configuration](configuration.md) for the settings behind these.

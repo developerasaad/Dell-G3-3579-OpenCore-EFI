@@ -22,7 +22,7 @@ Statuses use: **Working** (verified on the laptop) · **Partial** ·
 | Sleep / wake | Untested | — |
 | HDMI | Untested | likely wired to the disabled dGPU |
 | Webcam | Untested | enumerates as USB UVC |
-| SD reader (Realtek USB) | Untested | native USB mass storage |
+| **SD reader (Realtek RTS, PCIe)** | **Not working** | `RealtekCardReader.kext` is missing from this EFI — the Sonoma EFI has it |
 | NVIDIA GTX 1050 | Not working | Pascal has no macOS driver; disabled |
 
 Touchpad pointer feel is slightly less fluid than Sonoma on this hardware; the

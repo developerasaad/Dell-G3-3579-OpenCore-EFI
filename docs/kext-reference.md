@@ -45,7 +45,7 @@ redistributing.
 
 | Kext | Version | Note |
 |------|---------|------|
-| RealtekCardReader | 0.9.7 | PCIe SD reader; the G3's reader is USB, so this is not required |
+| RealtekCardReader | 0.9.7 | PCIe Realtek RTS SD reader driver — **required** for the internal reader; missing from the Sequoia EFI (SD untested there) |
 | XHCI-unsupported | 0.9.2 | Disabled; not needed on this XHCI |
 
 ## Dependencies

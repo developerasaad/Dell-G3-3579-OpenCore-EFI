@@ -54,7 +54,7 @@ Internal display: LG Display `LGD053F`, 1920×1080, eDP, connected to the iGPU
 | SATA controller | Intel `8086:A353` AHCI (needs `CtlnaAHCIPort` on macOS) |
 | Reference drive | SATA SSD |
 | USB controller | Intel `8086:A36D` XHCI |
-| SD reader | Realtek USB `0BDA:0129` |
+| SD reader | Realtek RTS PCIe reader (`0BDA:0129` as USB interface); needs `RealtekCardReader` on macOS |
 
 ## Notes for adapters
 

@@ -18,6 +18,16 @@ If a future WhateverGreen or BrightnessKeys release resolves this, test it with 
 brightness measurement (`AppleBacklightDisplay` → `bklt`) before committing — see
 [known limitations](#known-limitations-of-static-testing).
 
+## SD reader does not work
+
+The internal SD reader is a Realtek RTS **PCIe** controller that needs
+`RealtekCardReader.kext` (0.9.7). That kext is present in the Sonoma EFI but is
+**missing from this Sequoia EFI**, so inserted cards do not mount.
+
+Fixing it requires adding `RealtekCardReader.kext` to `EFI/OC/Kexts` and to
+`Kernel/Add` — but verify its Sequoia compatibility first; version 0.9.7 is
+tested on Sonoma only.
+
 ## NVIDIA GTX 1050 — unsupported
 
 Pascal has no macOS driver and the internal panel is wired to the iGPU, so the

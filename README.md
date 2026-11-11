@@ -20,7 +20,7 @@ and its Bluetooth depends on the USB map being loaded.
 - NVIDIA GeForce GTX 1050 (Pascal, `10DE:1C8D`) — unsupported, disabled in macOS
 - Realtek ALC236 audio · Intel Wireless-AC 9462 Wi-Fi · Intel Bluetooth (USB)
 - Realtek RTL8111 Ethernet · I2C HID touchpad · PS/2 keyboard
-- SATA SSD (Intel `8086:A353`) · Realtek USB SD reader
+- SATA SSD (Intel `8086:A353`) · Realtek RTS PCIe SD reader
 
 Full details: [hardware specifications](docs/hardware-specifications.md).
 
@@ -37,7 +37,8 @@ Full details: [hardware specifications](docs/hardware-specifications.md).
 | Wi-Fi / Bluetooth | Working | Working |
 | Ethernet | Working | Working |
 | NVIDIA GTX 1050 | Not working | Not working |
-| Sleep / wake, HDMI, webcam, SD | Untested | Untested |
+| Sleep / wake, HDMI, webcam | Untested | Untested |
+| SD reader | Working | Not working (driver missing in the Sequoia EFI) |
 
 Per-OS details: [Sonoma](Sonoma/docs/hardware-support.md) ·
 [Sequoia](Sequoia/docs/hardware-support.md).
