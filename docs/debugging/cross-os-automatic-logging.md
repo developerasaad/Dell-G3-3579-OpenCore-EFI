@@ -14,9 +14,9 @@ on the display being usable.
 
 | Service | Type | Runs | Captures |
 |---------|------|------|----------|
-| `com.asaad.seqdiag` | LaunchDaemon (root, boot) | at boot, ~70 s window | Bluetooth/backlight kexts, USB enumeration, controller state, live 60 s log stream |
-| `com.asaad.i2cdiag` | LaunchDaemon (root, boot) | at boot | I2C trackpad state, report interval, pointer settings |
-| `com.asaad.keycap` | LaunchAgent (user, login) | ~12 s after login | spoken prompt + 40 s HID/brightness log capture while keys are pressed |
+| `com.<username>.seqdiag` | LaunchDaemon (root, boot) | at boot, ~70 s window | Bluetooth/backlight kexts, USB enumeration, controller state, live 60 s log stream |
+| `com.<username>.i2cdiag` | LaunchDaemon (root, boot) | at boot | I2C trackpad state, report interval, pointer settings |
+| `com.<username>.keycap` | LaunchAgent (user, login) | ~12 s after login | spoken prompt + 40 s HID/brightness log capture while keys are pressed |
 | `brightness-test.sh` | one-shot | manual | driver `bklt` value before/after each key combination, with verdict |
 
 All output lands in `~/Desktop` on Sequoia, which is readable from Sonoma once the
@@ -64,11 +64,11 @@ chown <user>:staff "$OUT" 2>/dev/null
 exit 0
 ```
 
-`/Library/LaunchDaemons/com.asaad.seqdiag.plist`:
+`/Library/LaunchDaemons/com.<username>.seqdiag.plist`:
 
 ```xml
 <dict>
-    <key>Label</key><string>com.asaad.seqdiag</string>
+    <key>Label</key><string>com.<username>.seqdiag</string>
     <key>ProgramArguments</key>
     <array><string>/bin/bash</string><string>/usr/local/bin/seqdiag.sh</string></array>
     <key>RunAtLoad</key><true/>
@@ -82,7 +82,7 @@ exit 0
 
 `BrightnessKeys` reacts to ACPI brightness events, so diagnosing the keys meant
 recording what happens while they are pressed — which requires interaction. The
-login agent `com.asaad.keycap` runs a 40-second capture right after login and
+login agent `com.<username>.keycap` runs a 40-second capture right after login and
 announces the window with `say` and a notification:
 
 ```bash
@@ -110,10 +110,10 @@ V="/Volumes/<Sequoia Data volume>"   # mount point of the Sequoia Data volume
 
 sudo cp seqdiag.sh    "$V/usr/local/bin/seqdiag.sh"
 sudo chmod 755        "$V/usr/local/bin/seqdiag.sh"
-sudo cp com.asaad.seqdiag.plist "$V/Library/LaunchDaemons/"
+sudo cp com.<username>.seqdiag.plist "$V/Library/LaunchDaemons/"
 
 sudo cp keycap.sh     "$V/usr/local/bin/keycap.sh"
-sudo cp com.asaad.keycap.plist "$V/Users/<user>/Library/LaunchAgents/"
+sudo cp com.<username>.keycap.plist "$V/Users/<user>/Library/LaunchAgents/"
 ```
 
 `launchd` scans `Library/LaunchDaemons` and the user's `Library/LaunchAgents` on
@@ -131,10 +131,10 @@ cat seqdiag-*.txt
 ## Removing
 
 ```bash
-sudo launchctl bootout system/com.asaad.seqdiag 2>/dev/null
-sudo rm /Library/LaunchDaemons/com.asaad.seqdiag.plist /usr/local/bin/seqdiag.sh
-launchctl bootout gui/$(id -u)/com.asaad.keycap 2>/dev/null
-rm ~/Library/LaunchAgents/com.asaad.keycap.plist /usr/local/bin/keycap.sh
+sudo launchctl bootout system/com.<username>.seqdiag 2>/dev/null
+sudo rm /Library/LaunchDaemons/com.<username>.seqdiag.plist /usr/local/bin/seqdiag.sh
+launchctl bootout gui/$(id -u)/com.<username>.keycap 2>/dev/null
+rm ~/Library/LaunchAgents/com.<username>.keycap.plist /usr/local/bin/keycap.sh
 ```
 
 ## What it found on this machine
@@ -142,7 +142,7 @@ rm ~/Library/LaunchAgents/com.asaad.keycap.plist /usr/local/bin/keycap.sh
 - `AppleBacklightDisplay` → `bklt` stayed at its maximum during the dark-screen
   period, while macOS requested full brightness — pointing at the backlight
   register path rather than a brightness policy. See
-  [display backlight](../display-backlight.md).
+  [display backlight](../../Sequoia/docs/display-backlight.md).
 - With the USB map disabled, the Intel Bluetooth device (XHCI port HS14) did not
   enumerate at all, and `IntelBluetoothFirmware` consequently never loaded. See
-  [known issues](../known-issues.md).
+  [known issues](../../Sequoia/docs/known-issues.md).
