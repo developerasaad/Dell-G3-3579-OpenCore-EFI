@@ -13,7 +13,7 @@ Statuses use: **Working** (verified on the laptop) · **Partial** ·
 | Touchpad (I2C HID) | Working | VoodooI2C + VoodooI2CHID |
 | Volume keys | Working | VoodooPS2 ADB codes |
 | Audio (ALC236, layout 15) | Working | AppleALC |
-| Microphone | Working | verified — captures speech (peak −1.8 dBFS at full input gain); keep input volume near max |
+| Microphone | Working | verified — but only at high input volume; see [microphone setup](#microphone-setup--set-input-volume-near-max) below |
 | Wi-Fi (Intel AC 9462) | Working | AirportItlwm 2.3.0 |
 | Bluetooth (Intel) | Working | IntelBluetoothFirmware + BlueToolFixup |
 | Ethernet (RTL8111) | Working | RealtekRTL8111 |
@@ -26,3 +26,29 @@ Statuses use: **Working** (verified on the laptop) · **Partial** ·
 | NVIDIA GTX 1050 | Not working | Pascal has no macOS driver; disabled |
 
 See [configuration](configuration.md) for the settings behind these.
+
+## Microphone setup — set input volume near max
+
+The internal microphone works, but **not at the default input volume**. At the
+default 51 % it captures almost nothing — measured on this laptop, music playing
+right next to the machine produced no usable signal. Only after raising the
+input volume to 100 % did the microphone clearly capture audio:
+
+| macOS input volume | Captured level (RMS / peak) | Verdict |
+|---|---|---|
+| 51 % (default) | −75 dBFS / −53 dBFS | near-digital-silence |
+| 100 % | −42.8 dBFS / −1.8 dBFS | clear signal |
+
+This is a quirk of how AppleALC maps macOS input volume to analog gain on the
+ALC236 — moderate slider positions behave like a broken microphone.
+
+**Setup:**
+
+1. System Settings → Sound → **Input** → select *Built-in Microphone*
+2. Drag **Input volume** to 100 % (75 %+ at minimum)
+3. Speak normally and watch the level meter — the bars should move
+4. Quick end-to-end check without any extra tools: QuickTime Player →
+   File → **New Audio Recording**, record a few seconds and play it back
+
+If the level meter stays flat at high volume, that is a real microphone problem
+— otherwise the capture path is fine and only the gain needed adjusting.
