@@ -37,7 +37,8 @@ Full details: [hardware specifications](docs/hardware-specifications.md).
 | Wi-Fi / Bluetooth | Working | Working |
 | Ethernet | Working | Working |
 | NVIDIA GTX 1050 | Not working | Not working |
-| Sleep / wake, HDMI, webcam | Untested | Untested |
+| Sleep / wake | Untested | Untested |
+| HDMI output | Not working | wired to the disabled NVIDIA dGPU (verified: no external display detected) |
 | SD reader | Working | Not working (driver missing in the Sequoia EFI) |
 
 Per-OS details: [Sonoma](Sonoma/docs/hardware-support.md) ·

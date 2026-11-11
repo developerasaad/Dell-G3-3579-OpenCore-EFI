@@ -28,6 +28,20 @@ Fixing it requires adding `RealtekCardReader.kext` to `EFI/OC/Kexts` and to
 `Kernel/Add` — but verify its Sequoia compatibility first; version 0.9.7 is
 tested on Sonoma only.
 
+## HDMI output does not work
+
+Connecting an external display over HDMI produces no image: macOS detects no
+external display (`system_profiler SPDisplaysDataType` shows only the internal
+eDP panel).
+
+The HDMI port on the G3 3579 is wired to the NVIDIA dGPU, which is disabled
+(`SSDT-Disable_GPU_PEG0`) and unsupported (Pascal has no macOS driver). This is
+the same Optimus design that keeps the internal panel on the iGPU, so no
+framebuffer patch can enable it.
+
+**Workaround:** use the HDMI port under Windows, where the GTX 1050 has full
+driver support.
+
 ## NVIDIA GTX 1050 — unsupported
 
 Pascal has no macOS driver and the internal panel is wired to the iGPU, so the

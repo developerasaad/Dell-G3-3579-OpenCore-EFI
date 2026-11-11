@@ -20,7 +20,7 @@ Statuses use: **Working** (verified on the laptop) · **Partial** ·
 | Battery reporting | Partial | SMCBatteryManager present; not independently verified |
 | USB ports | Working | UTBMap |
 | Sleep / wake | Untested | — |
-| HDMI | Untested | likely wired to the disabled dGPU |
+| HDMI output | **Not working** | HDMI is wired to the NVIDIA dGPU, which is disabled; verified — connecting a TV detects no external display |
 | Webcam | Untested | enumerates as USB UVC |
 | **SD reader (Realtek RTS, PCIe)** | **Not working** | `RealtekCardReader.kext` is missing from this EFI — the Sonoma EFI has it |
 | NVIDIA GTX 1050 | Not working | Pascal has no macOS driver; disabled |
