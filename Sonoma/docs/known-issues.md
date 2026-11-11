@@ -23,13 +23,6 @@ framebuffer patch can enable it.
 **Workaround:** use the HDMI port under Windows, where the GTX 1050 has full
 driver support.
 
-## Webcam sensor — defective
-
-The webcam enumerates as a native UVC camera and the capture pipeline works
-(streams 1280×720 frames), but the sensor itself is faulty and captures a black
-image — confirmed by the same result under Windows. This is a hardware defect,
-not a configuration problem.
-
 ## Sleep / wake — untested
 
 Not tested. Assume unknown rather than working.

@@ -46,6 +46,7 @@ Internal display: LG Display `LGD053F`, 1920×1080, eDP, connected to the iGPU
 |--------|-----|--------|
 | Touchpad | I2C HID (`DELL086F`) | VoodooI2C + VoodooI2CHID |
 | Keyboard | PS/2 (`DLLK086F`) | VoodooPS2Controller |
+| Webcam (with activity LED) | USB UVC (`0BDA:568A`) | native UVC — no kext |
 
 ## Storage / USB
 

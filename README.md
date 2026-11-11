@@ -39,7 +39,7 @@ Full details: [hardware specifications](docs/hardware-specifications.md).
 | Ethernet | Working | Working |
 | NVIDIA GTX 1050 | Not working | Not working |
 | Sleep / wake | Untested | Untested |
-| Webcam | Sensor defective (pipeline OK) | Sensor defective (hardware) |
+| Webcam (incl. activity LED) | Working | Working |
 | HDMI output | Not working | wired to the disabled NVIDIA dGPU (verified: no external display detected) |
 | SD reader | Working | Working |
 

@@ -23,7 +23,7 @@ Verified on macOS Sequoia 15.8.2 (build 24H232).
 | USB ports | Working | UTBMap |
 | Sleep / wake | Untested | — |
 | HDMI output | **Not working** | HDMI is wired to the NVIDIA dGPU, which is disabled; verified — connecting a TV detects no external display |
-| Webcam | **Not working — sensor defective** | same dead sensor confirmed on Windows; the UVC pipeline itself was verified working on Sonoma |
+| Webcam (incl. activity LED) | Working | native UVC, no kext — video works and the activity LED lights on 15.8.2; microphone capture, FaceTime/conferencing and other resolutions not tested |
 | **SD reader (Realtek RTS, PCIe)** | **Working** | physically verified on 15.8.2 — 4 GB FAT32 card: detection, mount, file access, file copy; `RealtekCardReader` 0.9.7 |
 | NVIDIA GTX 1050 | Not working | Pascal has no macOS driver; disabled |
 

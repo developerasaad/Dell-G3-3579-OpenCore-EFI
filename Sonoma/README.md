@@ -2,7 +2,7 @@
 
 OpenCore configuration for **macOS Sonoma 14.8.9 (23J631)** on the Dell G3 3579.
 
-- **OpenCore:** 1.0.8
+- **OpenCore:** 1.0.8 RELEASE (`REL-108-2026-09-27`)
 - **SMBIOS:** `MacBookPro15,2` (sample identity — replace with your own for Apple services)
 - **Status:** boot-tested; this is the daily-driver configuration on the laptop
 
@@ -25,9 +25,9 @@ Shared references: [hardware](../docs/hardware-specifications.md) ·
 
 Working: Intel graphics acceleration, internal display, brightness (slider and
 keys), keyboard, touchpad, audio, microphone (with the input-volume quirk),
-Wi-Fi, Bluetooth, Ethernet, USB, SD reader.
+Wi-Fi, Bluetooth, Ethernet, USB, SD reader, webcam (including its activity LED).
 Not working: NVIDIA GTX 1050 (disabled, unsupported), HDMI output (wired to the
-dGPU), webcam sensor (defective hardware — the capture pipeline works).
+dGPU).
 Untested: sleep/wake.
 
 See [hardware support](docs/hardware-support.md) for the full table.

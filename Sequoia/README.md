@@ -2,11 +2,16 @@
 
 OpenCore configuration for **macOS Sequoia 15.8.2 (24H232)** on the Dell G3 3579.
 
-- **OpenCore:** 1.0.9
+- **OpenCore:** 1.0.9 RELEASE (`REL-109-2026-11-08`)
 - **SMBIOS:** `MacBookPro15,2` (sample identity — replace with your own for Apple services)
-- **Status:** boot-tested and installed on this laptop; SD reader verified
-  working (15.8.2). Brightness keys are the main remaining limitation — see
+- **Status:** boot-tested on this laptop under macOS 15.8.2 (24H232) with
+  OpenCore 1.0.9 RELEASE; SD reader and webcam (including its activity LED)
+  verified working. Brightness keys are the main remaining limitation — see
   [known issues](docs/known-issues.md).
+- **Tested vs. shipped config:** the boot-tested EFI has `Misc → Debug`
+  disabled. This repository's copy is otherwise identical — same binaries,
+  kexts and ACPI — but still carries the original debug flags, which are inert
+  in a RELEASE build.
 
 This EFI is macOS-only: on a multiboot machine, keep the existing `Microsoft/` and
 vendor folders on your live EFI partition.
