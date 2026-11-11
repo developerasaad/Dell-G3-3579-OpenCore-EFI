@@ -13,7 +13,7 @@ Statuses use: **Working** (verified on the laptop) · **Partial** ·
 | Touchpad (I2C HID) | Working | VoodooI2C + VoodooI2CHID |
 | Volume keys | Working | VoodooPS2 ADB codes |
 | Audio (ALC236, layout 15) | Working | AppleALC |
-| Microphone | Untested | — |
+| Microphone | Working | verified — captures speech (peak −1.8 dBFS at full input gain); keep input volume near max |
 | Wi-Fi (Intel AC 9462) | Working | AirportItlwm 2.3.0 |
 | Bluetooth (Intel) | Working | IntelBluetoothFirmware + BlueToolFixup |
 | Ethernet (RTL8111) | Working | RealtekRTL8111 |
