@@ -1,0 +1,30 @@
+# macOS metadata
+.DS_Store
+._*
+
+# editor / caches
+.vscode/
+.idea/
+*.bak
+
+# logs and development artefacts (kept out of the published repo)
+*.log
+logs/
+validation/
+candidates/
+backups/
+prefs-export/
+reports/
+docs/archive/
+
+# diagnostic output
+hackdiag/
+i2cdiag*
+seqdiag*
+keycap*
+notes.log
+history.log
+SHA256SUMS
+
+# anything that may contain private identifiers or machine data
+*private*
