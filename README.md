@@ -40,7 +40,7 @@ Full details: [hardware specifications](docs/hardware-specifications.md).
 | Sleep / wake | Untested | Untested |
 | Webcam | Streaming verified — sensor defective | black frames on Windows too (hardware) |
 | HDMI output | Not working | wired to the disabled NVIDIA dGPU (verified: no external display detected) |
-| SD reader | Working | Not working (driver missing in the Sequoia EFI) |
+| SD reader | Working | Working |
 
 Per-OS details: [Sonoma](Sonoma/docs/hardware-support.md) ·
 [Sequoia](Sequoia/docs/hardware-support.md).

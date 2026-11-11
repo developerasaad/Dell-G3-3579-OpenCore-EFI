@@ -29,11 +29,15 @@ Sequoia if you keep both installs.
 
 ## Kernel → Add
 
-Same stack as Sonoma, with two differences:
+Same stack as Sonoma, with these differences:
 
 - **AirportItlwm 2.4.0** (Sequoia build) instead of 2.3.0.
-- No `RealtekCardReader` / `XHCI-unsupported` (the G3's SD reader is USB and
-  needs neither).
+- **RealtekCardReader 0.9.7** is present — it drives the internal Realtek RTS
+  PCIe SD reader, which has no native macOS driver. The entry uses
+  `MinKernel 18.0.0` with no `MaxKernel` fence: the upstream release lists
+  Monterey and older as supported, but this build loads and works on Sequoia
+  15.8.2 (physically verified).
+- No `XHCI-unsupported`.
 
 `CtlnaAHCIPort` is required — without it the SATA boot disk does not appear.
 

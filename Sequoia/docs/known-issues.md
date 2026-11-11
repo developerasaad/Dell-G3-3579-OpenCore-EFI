@@ -18,16 +18,6 @@ If a future WhateverGreen or BrightnessKeys release resolves this, test it with 
 brightness measurement (`AppleBacklightDisplay` → `bklt`) before committing — see
 [known limitations](#known-limitations-of-static-testing).
 
-## SD reader does not work
-
-The internal SD reader is a Realtek RTS **PCIe** controller that needs
-`RealtekCardReader.kext` (0.9.7). That kext is present in the Sonoma EFI but is
-**missing from this Sequoia EFI**, so inserted cards do not mount.
-
-Fixing it requires adding `RealtekCardReader.kext` to `EFI/OC/Kexts` and to
-`Kernel/Add` — but verify its Sequoia compatibility first; version 0.9.7 is
-tested on Sonoma only.
-
 ## HDMI output does not work
 
 Connecting an external display over HDMI produces no image: macOS detects no
@@ -57,8 +47,9 @@ in Accessibility settings.
 
 ## Features not verified
 
-Sleep/wake, HDMI output, microphone, webcam capture, and the SD reader are
-untested. Assume unknown rather than broken.
+Sleep/wake, microphone, and webcam capture are untested on this OS. Assume
+unknown rather than broken. HDMI output is verified not working (dGPU-wired);
+the SD reader is verified working.
 
 ## Boot safety
 

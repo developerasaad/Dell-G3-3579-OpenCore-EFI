@@ -45,7 +45,7 @@ redistributing.
 
 | Kext | Version | Note |
 |------|---------|------|
-| RealtekCardReader | 0.9.7 | PCIe Realtek RTS SD reader driver — **required** for the internal reader; missing from the Sequoia EFI (SD untested there) |
+| RealtekCardReader | 0.9.7 | PCIe Realtek RTS SD reader driver — required for the internal reader; included in both EFIs, verified working on Sequoia 15.8.2 |
 | XHCI-unsupported | 0.9.2 | Disabled; not needed on this XHCI |
 
 ## Dependencies

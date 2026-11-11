@@ -10,6 +10,11 @@ They then run automatically at every Sequoia boot, write their results to the
 user's Desktop, and can be read back from Sonoma afterwards — without depending
 on the display being usable.
 
+These collectors are **temporary troubleshooting tools**. Nothing in the EFI or
+the operating system depends on them, and a normal installation does not need
+them. Install them for a specific investigation and remove them when it is
+finished (see [Removing](#removing)).
+
 ## Design
 
 | Service | Type | Runs | Captures |

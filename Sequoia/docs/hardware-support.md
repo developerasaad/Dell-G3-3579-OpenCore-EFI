@@ -3,6 +3,8 @@
 Statuses use: **Working** (verified on the laptop) · **Partial** ·
 **Not working** (confirmed) · **Untested** (no reliable verification).
 
+Verified on macOS Sequoia 15.8.2 (build 24H232).
+
 | Feature | Status | Notes |
 |---------|--------|-------|
 | Intel UHD 630 acceleration | Working | Metal 3, framebuffer `0x3EA50009` |
@@ -22,7 +24,7 @@ Statuses use: **Working** (verified on the laptop) · **Partial** ·
 | Sleep / wake | Untested | — |
 | HDMI output | **Not working** | HDMI is wired to the NVIDIA dGPU, which is disabled; verified — connecting a TV detects no external display |
 | Webcam | **Not working — sensor defective** | same dead sensor confirmed on Windows; the UVC pipeline itself was verified working on Sonoma |
-| **SD reader (Realtek RTS, PCIe)** | **Not working** | `RealtekCardReader.kext` is missing from this EFI — the Sonoma EFI has it |
+| **SD reader (Realtek RTS, PCIe)** | **Working** | physically verified on 15.8.2 — 4 GB FAT32 card: detection, mount, file access, file copy; `RealtekCardReader` 0.9.7 |
 | NVIDIA GTX 1050 | Not working | Pascal has no macOS driver; disabled |
 
 Touchpad pointer feel is slightly less fluid than Sonoma on this hardware; the
