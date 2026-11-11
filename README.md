@@ -50,6 +50,7 @@ Per-OS details: [Sonoma](Sonoma/docs/hardware-support.md) ·
 - [Kext reference](docs/kext-reference.md)
 - [BIOS reference](docs/bios-reference.md)
 - [SMBIOS setup](docs/smbios.md)
+- [Development and debugging](docs/development.md)
 
 ## Credits
 
