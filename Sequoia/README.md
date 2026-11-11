@@ -5,8 +5,8 @@ OpenCore configuration for **macOS Sequoia 15.8.2 (24H232)** on the Dell G3 3579
 - **OpenCore:** 1.0.9
 - **SMBIOS:** `MacBookPro15,2` (sample identity — replace with your own for Apple services)
 - **Status:** boot-tested and installed on this laptop; SD reader verified
-  working (15.8.2); brightness keys are the one known limitation (see
-  [known issues](docs/known-issues.md)).
+  working (15.8.2). Brightness keys are the main remaining limitation — see
+  [known issues](docs/known-issues.md).
 
 This EFI is macOS-only: on a multiboot machine, keep the existing `Microsoft/` and
 vendor folders on your live EFI partition.

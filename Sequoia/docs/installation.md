@@ -21,7 +21,7 @@ sudo /Applications/Install\ macOS\ Sequoia.app/Contents/Resources/createinstallm
 ```
 
 Format the USB as Mac OS Extended (Journaled) / GUID first; `createinstallmedia`
-converts it to APFS.
+refuses APFS targets.
 
 ## 2. Put the EFI on the installer USB
 

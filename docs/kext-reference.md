@@ -31,6 +31,7 @@ redistributing.
 | UTBMap | 1.1 | **Dell-specific** USB map | generated with [USBToolBox/tool](https://github.com/USBToolBox/tool) |
 | CtlnaAHCIPort | 341.0.2 | Unsupported Intel SATA AHCI | [Ctlna/CtlnaAHCIPort](https://github.com/Ctlna/CtlnaAHCIPort) |
 | RealtekRTL8111 | 2.4.2 | RTL8111 Ethernet | [Mieze/RTL8111_driver_for_OS_X](https://github.com/Mieze/RTL8111_driver_for_OS_X) |
+| RealtekCardReader | 0.9.7 | Internal Realtek RTS PCIe SD reader | [0xFireWolf/RealtekCardReader](https://github.com/0xFireWolf/RealtekCardReader) |
 | IntelBluetoothFirmware | 2.5.0 | Intel BT firmware | [OpenIntelWireless/IntelBluetoothFirmware](https://github.com/OpenIntelWireless/IntelBluetoothFirmware) |
 | IntelBTPatcher | 2.5.0 | Intel BT patching | same repo |
 | BlueToolFixup | 2.7.3 | BT stack fixup | [acidanthera/BrcmPatchRAM](https://github.com/acidanthera/BrcmPatchRAM) |
@@ -41,11 +42,10 @@ redistributing.
 |------|--------|---------|------|
 | AirportItlwm | 2.3.0 | 2.4.0 | Wi-Fi; build must match the macOS release |
 
-## Sonoma-only (present but optional/disabled)
+## Present but not loaded
 
 | Kext | Version | Note |
 |------|---------|------|
-| RealtekCardReader | 0.9.7 | PCIe Realtek RTS SD reader driver — required for the internal reader; included in both EFIs, verified working on Sequoia 15.8.2 |
 | XHCI-unsupported | 0.9.2 | Disabled; not needed on this XHCI |
 
 ## Dependencies

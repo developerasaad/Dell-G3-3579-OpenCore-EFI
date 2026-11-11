@@ -38,8 +38,11 @@ change BIOS settings for it.
 
 **Cause:** macOS picks a default layout that doesn't match the ALC236 wiring.
 
-**Fix:** inject `layout-id = 15` on `PciRoot(0x0)/Pci(0x1f,0x3)`. Verified working
-for speakers/headphones; layout 5 is **not** correct for this codec.
+**Fix:** inject `layout-id = 15` on `PciRoot(0x0)/Pci(0x1f,0x3)`. Verified for
+speakers, headphones and the internal microphone. The microphone only produces a
+usable signal at high input volume (see
+[hardware support](hardware-support.md)); layout 5 is **not** correct for this
+codec.
 
 ## Dell sensors / EC
 

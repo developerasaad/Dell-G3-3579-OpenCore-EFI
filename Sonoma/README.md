@@ -24,9 +24,11 @@ Shared references: [hardware](../docs/hardware-specifications.md) ·
 ## Feature summary
 
 Working: Intel graphics acceleration, internal display, brightness (slider and
-keys), keyboard, touchpad, audio, Wi-Fi, Bluetooth, Ethernet, USB.
-Not working: NVIDIA GTX 1050 (disabled, unsupported).
-Untested: sleep/wake, HDMI, webcam, SD reader, microphone.
+keys), keyboard, touchpad, audio, microphone (with the input-volume quirk),
+Wi-Fi, Bluetooth, Ethernet, USB, SD reader.
+Not working: NVIDIA GTX 1050 (disabled, unsupported), HDMI output (wired to the
+dGPU), webcam sensor (defective hardware — the capture pipeline works).
+Untested: sleep/wake.
 
 See [hardware support](docs/hardware-support.md) for the full table.
 

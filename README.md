@@ -34,11 +34,12 @@ Full details: [hardware specifications](docs/hardware-specifications.md).
 | Keyboard / volume keys | Working | Working |
 | Touchpad | Working | Working |
 | Audio | Working | Working |
+| Microphone | Working (input-volume quirk) | Untested |
 | Wi-Fi / Bluetooth | Working | Working |
 | Ethernet | Working | Working |
 | NVIDIA GTX 1050 | Not working | Not working |
 | Sleep / wake | Untested | Untested |
-| Webcam | Streaming verified — sensor defective | black frames on Windows too (hardware) |
+| Webcam | Sensor defective (pipeline OK) | Sensor defective (hardware) |
 | HDMI output | Not working | wired to the disabled NVIDIA dGPU (verified: no external display detected) |
 | SD reader | Working | Working |
 

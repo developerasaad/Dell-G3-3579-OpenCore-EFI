@@ -1,12 +1,13 @@
 # Known Issues — macOS Sonoma
 
-Current limitations on the Dell G3 3579.
+Current limitations on the Dell G3 3579, verified by testing.
 
 ## NVIDIA GTX 1050 — unsupported
 
-Pascal has no macOS driver (web drivers stopped at High Sierra, and the internal
-panel is wired to the iGPU anyway). The GPU is disabled with `SSDT-Disable_GPU_PEG0`
-to save power. Use Windows for the dGPU.
+Pascal has no macOS driver (NVIDIA web drivers stopped at High Sierra), and the
+internal panel is wired to the iGPU anyway, so the dGPU cannot drive any display.
+It is disabled with `SSDT-Disable_GPU_PEG0` to save power. Use Windows for the
+dGPU.
 
 ## HDMI output does not work
 
@@ -22,20 +23,16 @@ framebuffer patch can enable it.
 **Workaround:** use the HDMI port under Windows, where the GTX 1050 has full
 driver support.
 
-## Features not verified
+## Webcam sensor — defective
 
-The following have not been tested and should be assumed unknown rather than
-broken: sleep/wake, HDMI output, microphone, webcam video capture, SD reader.
+The webcam enumerates as a native UVC camera and the capture pipeline works
+(streams 1280×720 frames), but the sensor itself is faulty and captures a black
+image — confirmed by the same result under Windows. This is a hardware defect,
+not a configuration problem.
 
-## Microphone
+## Sleep / wake — untested
 
-Not verified. The codec is ALC236 (layout 15); internal mic behaviour is untested
-on this configuration.
-
-## SD reader
-
-The reader is a **USB** Realtek (`0BDA:0129`), not PCIe — `RealtekCardReader.kext`
-is not required and is not included in this EFI.
+Not tested. Assume unknown rather than working.
 
 ## Boot safety
 

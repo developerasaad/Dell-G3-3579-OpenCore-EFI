@@ -55,3 +55,10 @@ leaves the panel black at boot (measured, see
 
 `SecureBootModel = Disabled`, `Vault = Optional`, `ScanPolicy = 0`,
 `csr-active-config = 030a0000`.
+
+## Debug logging
+
+This EFI still ships with `Misc → Debug` logging enabled (`AppleDebug`,
+`SysReport`, `Target 67`), left over from bring-up. It is harmless but noisy and
+writes a sysreport on panic. Turn it off (`AppleDebug = false`, `Target = 0`)
+once the config is settled.

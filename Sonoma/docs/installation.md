@@ -22,7 +22,7 @@ sudo /Applications/Install\ macOS\ Sonoma.app/Contents/Resources/createinstallme
 ```
 
 The USB must be formatted Mac OS Extended (Journaled) / GUID before running
-`createinstallmedia`; it converts the volume to APFS itself.
+`createinstallmedia`; it refuses APFS targets.
 
 ## 2. Put the EFI on the installer USB
 

@@ -18,11 +18,10 @@ works on Sonoma — does not initialise the panel on 15.
 HS14) does not enumerate, so `IntelBluetoothFirmware` never loads and macOS
 reports a placeholder controller.
 
-**Fix:** enable `UTBMap.kext` (it was disabled during installation for the same
-reason the installer needed it disabled — see
-[Sonoma fixes](../../Sonoma/docs/fixes.md) for the background). The boot drive
-must be on a port the map declares; on this machine the installer stick sits on
-HS01, which it is.
+**Fix:** keep `UTBMap.kext` enabled. During installation the map had to be
+disabled because the installer drive sat on a port the map pruned (causing
+"still waiting for root device"); re-enable it after installing. The boot drive
+must be on a port the map declares.
 
 ## Touchpad conflict
 
@@ -44,4 +43,5 @@ slider to work.
 ## Audio layout
 
 **Fix:** inject `layout-id = 15` on the HDA device (ALC236). Verified for
-speakers/headphones.
+speakers and headphones; the internal microphone is Sonoma-verified only (see
+[Sonoma hardware support](../../Sonoma/docs/hardware-support.md)).

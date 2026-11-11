@@ -1,6 +1,6 @@
 # Dell G3 3579 — BIOS Reference
 
-Settings verified on the reference machine (BIOS 1.25.0). Apply these before
+Settings verified on this laptop (BIOS 1.25.0). Apply these before
 installing either macOS version.
 
 ## Required
@@ -23,7 +23,7 @@ installing either macOS version.
 
 ## Notes
 
-- The reference config uses the `AppleXcpmCfgLock` and `DisableIoMapper` quirks, so
+- The shipped config enables the `AppleXcpmCfgLock` and `DisableIoMapper` quirks, so
   it tolerates CFG Lock / VT-d being enabled. Disabling them in BIOS is cleaner.
 - The NVIDIA GPU can be left enabled in BIOS; macOS disables it via
   `SSDT-Disable_GPU_PEG0`. There is no need to change a "discrete graphics" BIOS

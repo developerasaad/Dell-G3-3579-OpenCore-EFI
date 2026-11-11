@@ -9,10 +9,10 @@ hardware report (ACPI/PCI enumeration). PCI/USB IDs are as detected.
 |------|-------|
 | Model | Dell G3 3579 |
 | Chipset | Intel HM370 (Cannon Lake PCH) |
-| BIOS | 1.25.0 (2023-04-12), UEFI, Secure Boot disabled |
+| BIOS | 1.25.0, UEFI, Secure Boot disabled |
 | CPU | Intel Core i5-8300H, Coffee Lake-H, 4 cores / 8 threads, 2.3 GHz |
 | CPU features | SSE4.2, AVX, AVX2 |
-| Memory | 8 GB (reference configuration) |
+| Memory | 8 GB |
 
 ## Graphics
 
@@ -52,9 +52,9 @@ Internal display: LG Display `LGD053F`, 1920×1080, eDP, connected to the iGPU
 | Item | Value |
 |------|-------|
 | SATA controller | Intel `8086:A353` AHCI (needs `CtlnaAHCIPort` on macOS) |
-| Reference drive | SATA SSD |
+| Boot drive | SATA SSD |
 | USB controller | Intel `8086:A36D` XHCI |
-| SD reader | Realtek RTS PCIe reader (`0BDA:0129` as USB interface); needs `RealtekCardReader` on macOS |
+| SD reader | Realtek RTS PCIe reader (shows as USB `0BDA:0129` on Windows); needs `RealtekCardReader` on macOS |
 
 ## Notes for adapters
 

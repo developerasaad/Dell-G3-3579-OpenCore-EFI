@@ -39,8 +39,9 @@ AAPL00,override-no-connect  <panel EDID>
 ## PlatformInfo
 
 SMBIOS `MacBookPro15,2` with sample identity — see
-[SMBIOS setup](../../docs/smbios.md). `UpdateSMBIOSMode = None` with
-`CustomSMBIOSGuid = true`, so Windows on the same disk keeps the real Dell DMI.
+[SMBIOS setup](../../docs/smbios.md). `UpdateSMBIOSMode = Custom` and the
+`CustomSMBIOSGuid` kernel quirk keep Windows on the same disk on its real Dell
+DMI.
 
 ## Kernel → Add
 

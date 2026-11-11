@@ -22,8 +22,8 @@ These work on any machine with the same *component*, independent of motherboard:
 - **AirportItlwm build** must match the macOS release (2.3.0 Sonoma, 2.4.0 Sequoia).
 - **Backlight boot-arg**: Sonoma uses `-igfxblt`; Sequoia needs `-igfxblr`
   (with the brightness-key trade-off). See each OS's configuration docs.
-- **USB map necessity**: Sequoia requires the map for Bluetooth; Sonoma tolerates
-  its absence.
+- **USB map necessity**: Sequoia requires the map for Bluetooth enumeration; both
+  EFIs ship with `UTBMap` enabled.
 
 ## Motherboard-dependent ACPI (do not copy blindly)
 

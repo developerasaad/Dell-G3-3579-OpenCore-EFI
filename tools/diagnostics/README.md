@@ -133,24 +133,17 @@ the `launchctl` steps are unnecessary.
 macOS's own unified logging, crash reports and diagnostics are untouched by
 any of this.
 
-## What has actually been tested
+## Where these come from
 
-These are the collectors from a real Dell G3 3579 installation and they ran
-during that work:
+These scripts were written and run on this machine while bringing up Sequoia.
+`hackdiag.sh`, `seqdiag.sh` and `i2cdiag.sh` produced the boot-time reports that
+the [known issues](../../Sequoia/docs/known-issues.md) and
+[display backlight](../../Sequoia/docs/display-backlight.md) notes are based on;
+`keycap.sh` confirmed that the brightness keys emit no HID event on Sequoia.
 
-- `hackdiag.sh`, `seqdiag.sh`, `i2cdiag.sh` collected reports on Sequoia
-  15.8.2 (24H232) at boot; their output is what the
-  [known issues](../../Sequoia/docs/known-issues.md) and
-  [display backlight](../../Sequoia/docs/display-backlight.md) notes are based on.
-- `keycap.sh` was used to confirm that the brightness keys emit no HID event
-  on Sequoia — the reason they do not work there is documented in
-  [known issues](../../Sequoia/docs/known-issues.md).
-
-What changed for publication: the hardcoded per-user paths became
-`DIAG_OUTDIR` / `DIAG_OWNER` / `DIAG_USER`, service labels moved from the
-original private prefix to `com.hackintosh.*`, and the chown calls became
-optional. The capture commands themselves are unchanged. The published
-copies pass `bash -n` and their plists pass `plutil -lint`, but they were not
-re-deployed to a live system after that refactor — treat the first run as a
-smoke test (a boot log and a `history.log` line are enough to confirm it
-worked).
+For publication I replaced the hardcoded paths and private service labels with
+the `DIAG_*` variables and `com.hackintosh.*` labels above. The capture commands
+are unchanged from what ran on real hardware. These copies pass `bash -n` and
+their plists pass `plutil -lint`, but they have not been run on a live install
+since that change, so treat the first deployment as a smoke test — a new
+`history.log` line is enough to confirm a collector ran.

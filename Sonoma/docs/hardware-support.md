@@ -3,6 +3,8 @@
 Statuses use: **Working** (verified on the laptop) · **Partial** ·
 **Not working** (confirmed) · **Untested** (no reliable verification).
 
+Verified on macOS Sonoma 14.8.9 (build 23J631).
+
 | Feature | Status | Notes |
 |---------|--------|-------|
 | Intel UHD 630 acceleration | Working | Metal 3, framebuffer `0x3EA50009` |

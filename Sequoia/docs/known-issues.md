@@ -14,9 +14,8 @@ ACPI path intact but leaves the panel black at boot. Measured and documented in
 
 **Workaround:** adjust brightness with the slider or Control Center.
 
-If a future WhateverGreen or BrightnessKeys release resolves this, test it with a
-brightness measurement (`AppleBacklightDisplay` → `bklt`) before committing — see
-[known limitations](#known-limitations-of-static-testing).
+If a future WhateverGreen or BrightnessKeys release resolves this, verify with a
+brightness measurement (`AppleBacklightDisplay` → `bklt`) before committing.
 
 ## HDMI output does not work
 

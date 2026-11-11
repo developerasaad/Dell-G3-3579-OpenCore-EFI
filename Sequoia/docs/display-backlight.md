@@ -64,9 +64,9 @@ tested and rejected is documented below.
 | `hidutil` remap of F11/F12 to brightness usages | no effect — the keys are ACPI EC events, not HID events |
 | Re-enabling the USB map | fixed Bluetooth (unrelated), keys unaffected |
 
-`brightness-test` verified the driver value: `bklt` stays at its maximum while the
-panel is dark, i.e. macOS requests full brightness and the hardware does not
-follow — a register-path failure, not a policy problem.
+A manual `bklt` reading showed the driver value stays at its maximum while the
+panel is dark — macOS requests full brightness and the hardware does not follow,
+a register-path failure rather than a policy problem.
 
 ## Applicability to other systems
 
