@@ -34,7 +34,7 @@ Full details: [hardware specifications](docs/hardware-specifications.md).
 | Keyboard / volume keys | Working | Working |
 | Touchpad | Working | Working |
 | Audio | Working | Working |
-| Microphone | Working (input-volume quirk) | Untested |
+| Microphone | Working (input-volume quirk) | Working (input-volume quirk) |
 | Wi-Fi / Bluetooth | Working | Working |
 | Ethernet | Working | Working |
 | NVIDIA GTX 1050 | Not working | Not working |
@@ -56,7 +56,7 @@ Per-OS details: [Sonoma](Sonoma/docs/hardware-support.md) ·
 - [SMBIOS setup](docs/smbios.md)
 - [Development and debugging](docs/development.md)
 - [Diagnostic tools](tools/diagnostics/README.md) — optional boot-time collectors
-  for debugging an installation you cannot use interactively
+  and a guided microphone test
 
 ## Credits
 

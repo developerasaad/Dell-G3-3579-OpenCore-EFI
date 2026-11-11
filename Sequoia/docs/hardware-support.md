@@ -15,7 +15,7 @@ Verified on macOS Sequoia 15.8.2 (build 24H232).
 | Volume keys | Working | VoodooPS2 ADB codes |
 | Touchpad (I2C HID) | Working | VoodooI2C + VoodooI2CHID (less fluid than Sonoma) |
 | Audio (ALC236, layout 15) | Working | AppleALC |
-| Microphone | Untested | verified working on Sonoma; expect the same input-volume quirk — set Input volume near max (see Sonoma [hardware support](../../Sonoma/docs/hardware-support.md#microphone-setup--set-input-volume-near-max)) |
+| Microphone | Working | captures audio at high input volume — measured on 15.8.2: −38.9 dBFS RMS at 100 % vs −69.1 dBFS at the default gain, sound source beside the machine; setup steps in the Sonoma [hardware support](../../Sonoma/docs/hardware-support.md#microphone-setup--set-input-volume-near-max) |
 | Wi-Fi (Intel AC 9462) | Working | AirportItlwm 2.4.0 (Sequoia build) |
 | Bluetooth (Intel) | Working | requires the USB map — see [known issues](known-issues.md) |
 | Ethernet (RTL8111) | Working | RealtekRTL8111 |

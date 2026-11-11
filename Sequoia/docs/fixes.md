@@ -43,5 +43,6 @@ slider to work.
 ## Audio layout
 
 **Fix:** inject `layout-id = 15` on the HDA device (ALC236). Verified for
-speakers and headphones; the internal microphone is Sonoma-verified only (see
-[Sonoma hardware support](../../Sonoma/docs/hardware-support.md)).
+speakers, headphones and the internal microphone. The microphone needs a high
+input volume — see the Sonoma
+[microphone setup](../../Sonoma/docs/hardware-support.md#microphone-setup--set-input-volume-near-max).

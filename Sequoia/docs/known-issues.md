@@ -46,10 +46,10 @@ in Accessibility settings.
 
 ## Features not verified
 
-Sleep/wake and microphone capture are untested on this OS. Assume unknown rather
-than broken. Webcam video is verified working (see
+Sleep/wake is untested on this OS. Assume unknown rather than broken. Webcam
+video, the microphone and the SD reader are verified working (see
 [hardware support](hardware-support.md)); HDMI output is verified not working
-(dGPU-wired), and the SD reader is verified working.
+(dGPU-wired).
 
 ## Boot safety
 

@@ -17,9 +17,34 @@ depends on them, and a normal installation does not need them.
 | `seqdiag.sh` | at boot, as root | Bluetooth stack state: loaded Intel BT / BlueTool / backlight kexts, USB enumeration of the BT controller, `SPBluetoothDataType`, boot-args, plus a 60-second **live** log stream filtered to Bluetooth and backlight messages. |
 | `i2cdiag.sh` | at boot, as root (also runs manually) | trackpad / I2C snapshot intended to be run on both a known-good and a problematic installation and diffed: pointer preferences, `VoodooI2CHIDDevice` properties (report interval, transport), interrupt-vs-polling evidence, GPIO controller, recent VoodooI2C kernel log, HID device list, power settings. |
 | `keycap.sh` | at login (LaunchAgent) or manually | HID/brightness event capture. It asks you to press F11, F12, Fn+F11, Fn+F12 and the volume-mute key during a 40-second window, and records what the system actually receives. Useful when the volume keys work but the brightness keys do not. |
+| `mic-test.sh` | manually | Guided four-step microphone check: quiet and sound-source recordings at the current input volume, then the same pair at 100 %. Reports RMS/peak dBFS per step and a verdict. |
 
-The `launchd/` plists run the first three at boot and the last at login. All of
-them are optional — pick the ones matching your problem.
+The `launchd/` plists run the first three at boot and the last at login;
+`mic-test.sh` is manual only. All of them are optional — pick the ones matching
+your problem.
+
+## Microphone test
+
+`mic-test.sh` needs the `mic-test` helper: either a compiled binary beside the
+script, or `mic-test.swift` plus `swiftc` — the script compiles it on first run.
+
+```bash
+cd tools/diagnostics/scripts
+swiftc -O mic-test.swift -o mic-test      # once
+bash mic-test.sh
+```
+
+It runs four numbered tests and waits for Enter before each: quiet and sound
+source at the current input volume, then quiet and sound source at 100 %. Each
+step prints RMS and peak dBFS; the summary prints a verdict and offers to replay
+the last recording. WAV files stay in `~/Desktop/mic-test-<timestamp>/`.
+
+On this laptop the microphone only produces a usable level at high input volume —
+documented ALC236 behaviour, not a fault. Measured here: `-38.9` dBFS RMS at
+100 % versus `-69.1` dBFS at the default gain, with a sound source next to the
+machine. See
+[Sonoma hardware support](../../Sonoma/docs/hardware-support.md#microphone-setup--set-input-volume-near-max)
+for the setup steps.
 
 ## How the cross-OS install works
 
@@ -139,7 +164,9 @@ These scripts were written and run on this machine while bringing up Sequoia.
 `hackdiag.sh`, `seqdiag.sh` and `i2cdiag.sh` produced the boot-time reports that
 the [known issues](../../Sequoia/docs/known-issues.md) and
 [display backlight](../../Sequoia/docs/display-backlight.md) notes are based on;
-`keycap.sh` confirmed that the brightness keys emit no HID event on Sequoia.
+`keycap.sh` confirmed that the brightness keys emit no HID event on Sequoia, and
+`mic-test.sh` produced the input-volume measurements behind the microphone notes
+on both installations.
 
 For publication I replaced the hardcoded paths and private service labels with
 the `DIAG_*` variables and `com.hackintosh.*` labels above. The capture commands
