@@ -86,8 +86,8 @@ overlap, not a compatibility claim.
 - [BIOS reference](docs/bios-reference.md)
 - [SMBIOS setup](docs/smbios.md)
 - [Development and debugging](docs/development.md)
-- [Diagnostic tools](tools/README.md) — optional boot-time collectors and a
-  guided microphone test
+- [Diagnostic tools](tools/README.md) — optional boot-time collectors, a guided
+  microphone test and lid sleep/wake capture
 
 Installation is per OS: [Sonoma](Sonoma/docs/installation.md) ·
 [Sequoia](Sequoia/docs/installation.md).

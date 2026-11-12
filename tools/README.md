@@ -14,7 +14,9 @@ tools/
 ├── bluetooth/    seqdiag.sh  + com.hackintosh.seqdiag.plist
 ├── keyboard/     keycap.sh   + com.hackintosh.keycap.plist
 ├── touchpad/     i2cdiag.sh  + com.hackintosh.i2cdiag.plist
-└── microphone/   mic-test.sh + mic-test.swift
+├── microphone/   mic-test.sh + mic-test.swift
+└── power/
+    └── lid-wake/ lidwake-collect.sh + com.hackintosh.lidwake.plist + lidwake-report.sh
 ```
 
 They are independent of OpenCore: nothing in the EFI installs, loads or depends
@@ -29,6 +31,7 @@ on them, and a normal installation does not need them.
 | `keyboard/` | `keycap.sh` | at login (LaunchAgent) or manually | HID/brightness event capture. Asks you to press F11, F12, Fn+F11, Fn+F12 and the volume-mute key during a 40-second window and records what the system actually receives. |
 | `touchpad/` | `i2cdiag.sh` | at boot, as root (also runs manually) | trackpad / I2C snapshot meant to be run on a known-good and a problematic installation and diffed: pointer preferences, `VoodooI2CHIDDevice` properties, interrupt-vs-polling evidence, GPIO controller, recent VoodooI2C log, HID device list, power settings. |
 | `microphone/` | `mic-test.sh` | manually | guided four-step microphone check: quiet and sound-source recordings at the current input volume, then the same pair at 100 %. Reports RMS/peak dBFS per step and a verdict. |
+| `power/lid-wake/` | `lidwake-collect.sh` | at boot, as root | lid sleep/wake evidence: filtered `PMRD:` power events, WindowServer display wake, `airportd` wake reason, plus a `pmset`/`ioreg` snapshot on each event and a 3-minute wake backfill. `lidwake-report.sh` summarises a session. |
 
 ## How the cross-OS install works
 
@@ -72,6 +75,11 @@ cp keyboard/com.hackintosh.keycap.plist "$TARGET/Users/$TARGET_USER/Library/Laun
 The repository paths above (e.g. `graphics/hackdiag.sh`) are the **source**
 locations. Once installed they live at `/usr/local/bin/<tool>.sh` on the target
 volume, which is what the plists reference — keep that layout when editing.
+
+The sleep/wake collector in `power/lid-wake/` installs the same way but keeps its
+own instructions in
+[power/lid-wake/README.md](power/lid-wake/README.md); it writes to
+`/Library/Logs/lidwake` and needs no `DIAG_*` variables.
 
 ### Point the reports somewhere readable
 
