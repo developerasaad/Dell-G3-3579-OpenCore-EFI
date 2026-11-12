@@ -10,7 +10,7 @@ Two input devices, two completely different driver paths.
 | Keystack | VoodooI2C 2.9.1 + VoodooI2CHID 1.0 (+ `VoodooInput` plugin inside VoodooI2C) |
 | ACPI support | `SSDT-GPI0` + `GPI0 _STA → XSTA` rename |
 | Interrupt mode | GPIO interrupt, reported by the `i2cdiag` snapshot on both Sonoma and Sequoia |
-| Verified | pointer working on both systems; gestures and scrolling not separately tested |
+| Verified | Sonoma 14.8.9: pointer, gestures and scrolling fully tested. Sequoia 15.8.2: all three work in testing, but less exhaustively. |
 
 The `_STA` rename detaches the firmware's GPIO controller so VoodooGPIO can own
 the interrupt; the injected `SSDT-GPI0` then describes the same controller

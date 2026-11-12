@@ -13,7 +13,7 @@ Verified on macOS Sequoia 15.8.2 (build 24H232).
 | Brightness — keys (F11/F12) | Not working | trade-off of `-igfxblr`; see [display backlight](display-backlight.md) and [known issues](known-issues.md) |
 | Keyboard (PS/2) | Working | VoodooPS2Controller |
 | Volume keys | Working | VoodooPS2 ADB codes |
-| Touchpad (I2C HID) | Working | VoodooI2C + VoodooI2CHID (less fluid than Sonoma) |
+| Touchpad (I2C HID) | Working | VoodooI2C + VoodooI2CHID — gestures and scrolling work; tested but less exhaustively than Sonoma, and the pointer feels slightly less fluid |
 | Audio (ALC236, layout 15) | Working | AppleALC |
 | Microphone | Working | captures audio at high input volume — measured on 15.8.2: −38.9 dBFS RMS at 100 % vs −69.1 dBFS at the default gain, sound source beside the machine; setup steps in the Sonoma [hardware support](../../Sonoma/docs/hardware-support.md#microphone-setup--set-input-volume-near-max) |
 | Wi-Fi (Intel AC 9462) | Working | AirportItlwm 2.4.0 (Sequoia build) |

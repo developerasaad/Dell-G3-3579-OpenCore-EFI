@@ -12,7 +12,7 @@ Verified on macOS Sonoma 14.8.9 (build 23J631).
 | Brightness — slider | Working | `AppleBacklight` binds to `LCD_` |
 | Brightness — keys (F11/F12) | Working | `-igfxblt` + BrightnessKeys |
 | Keyboard (PS/2) | Working | VoodooPS2Controller |
-| Touchpad (I2C HID) | Working | VoodooI2C + VoodooI2CHID |
+| Touchpad (I2C HID) | Working | VoodooI2C + VoodooI2CHID — pointer, gestures and scrolling fully tested |
 | Volume keys | Working | VoodooPS2 ADB codes |
 | Audio (ALC236, layout 15) | Working | AppleALC |
 | Microphone | Working | verified — but only at high input volume; see [microphone setup](#microphone-setup--set-input-volume-near-max) below |
