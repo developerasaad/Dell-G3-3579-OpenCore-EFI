@@ -47,7 +47,7 @@ snapshot() {   # snapshot <label> <file>
         /usr/sbin/sysctl -n kern.boottime 2>/dev/null
         echo "--- clamshell ---"
         /usr/sbin/ioreg -r -k AppleClamshellState -d 4 2>/dev/null \
-            | grep -E "AppleClamshell(State|CausesSleep)"
+            | grep -E '"AppleClamshell(State|CausesSleep)" ='
         echo "--- display power (4 = on) ---"
         /usr/sbin/ioreg -n IODisplayWrangler -r -d 1 2>/dev/null \
             | grep -o '"CurrentPowerState"=[0-9]*'
@@ -101,6 +101,7 @@ last_snap=0
     OR (process == "WindowServer" AND (eventMessage CONTAINS "displayDidWake" OR eventMessage CONTAINS "displayDidSleep" OR eventMessage CONTAINS "displayWillSleep" OR eventMessage CONTAINS "CoreRCDisplayPowerNotification"))
     OR (process == "airportd" AND eventMessage CONTAINS "System wake reason")
     OR (process == "bluetoothd" AND eventMessage CONTAINS[c] "wake")
+    OR (process == "corebrightnessd" AND (eventMessage CONTAINS "Woke Up" OR eventMessage CONTAINS "new state" OR eventMessage CONTAINS "BacklightControl"))
 ' 2>/dev/null | while IFS= read -r line; do
     printf '%s\n' "$line" >> "$SESSION/events.log"
     rotate

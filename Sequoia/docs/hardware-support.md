@@ -21,7 +21,7 @@ Verified on macOS Sequoia 15.8.2 (build 24H232).
 | Ethernet (RTL8111) | Working | RealtekRTL8111 |
 | Battery reporting | Partial | SMCBatteryManager present; not independently verified |
 | USB ports | Working | UTBMap |
-| Sleep / wake | Untested | — |
+| Lid sleep / wake | Working | tested with a 14 min lid sleep: `Clamshell Sleep` → `PBTN/UserActivity`, display awake 1.4 s after wake. Backlight returned at 52316/65535 against 65403 before sleep in that cycle — not yet reproduced. Overnight sleep and hibernation not tested |
 | HDMI output | **Not working** | HDMI is wired to the NVIDIA dGPU, which is disabled; verified — connecting a TV detects no external display |
 | Webcam (incl. activity LED) | Working | native UVC, no kext — video works and the activity LED lights on 15.8.2; microphone capture, FaceTime/conferencing and other resolutions not tested |
 | **SD reader (Realtek RTS, PCIe)** | **Working** | physically verified on 15.8.2 — 4 GB FAT32 card: detection, mount, file access, file copy; `RealtekCardReader` 0.9.7 |

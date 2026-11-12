@@ -44,12 +44,12 @@ report rate), but the pointer feels less fluid on Sequoia. That is Sequoia's
 compositor on UHD 630, not the trackpad. Try Reduce Transparency / Reduce Motion
 in Accessibility settings.
 
-## Features not verified
+## Verification scope
 
-Sleep/wake is untested on this OS. Assume unknown rather than broken. Webcam
-video, the microphone and the SD reader are verified working (see
-[hardware support](hardware-support.md)); HDMI output is verified not working
-(dGPU-wired).
+Webcam video, the microphone, the SD reader and lid sleep/wake are verified
+working (see [hardware support](hardware-support.md)); HDMI output is verified
+not working (dGPU-wired). Sleep was tested by closing the lid only — overnight
+sleep, hibernation and other sleep triggers were not.
 
 ## Boot safety
 

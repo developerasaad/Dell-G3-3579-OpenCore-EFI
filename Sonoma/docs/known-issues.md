@@ -23,10 +23,6 @@ framebuffer patch can enable it.
 **Workaround:** use the HDMI port under Windows, where the GTX 1050 has full
 driver support.
 
-## Sleep / wake — untested
-
-Not tested. Assume unknown rather than working.
-
 ## Boot safety
 
 If the machine fails to boot after an EFI change, recover by booting a USB

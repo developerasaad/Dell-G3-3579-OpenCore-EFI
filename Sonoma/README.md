@@ -28,10 +28,10 @@ Beyond this machine: [similar laptops](../docs/compatibility/similar-laptops.md)
 
 Working: Intel graphics acceleration, internal display, brightness (slider and
 keys), keyboard, touchpad, audio, microphone (with the input-volume quirk),
-Wi-Fi, Bluetooth, Ethernet, USB, SD reader, webcam (including its activity LED).
+Wi-Fi, Bluetooth, Ethernet, USB, SD reader, webcam (including its activity LED),
+lid sleep/wake.
 Not working: NVIDIA GTX 1050 (disabled, unsupported), HDMI output (wired to the
 dGPU).
-Untested: sleep/wake.
 
 See [hardware support](docs/hardware-support.md) for the full table.
 

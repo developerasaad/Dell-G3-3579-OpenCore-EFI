@@ -10,7 +10,7 @@ and changes no power settings, so it cannot keep the machine awake.
 | File | Contents |
 |---|---|
 | `baseline.txt` | state when the daemon started: boot time, clamshell, display power, backlight, battery/AC, assertions, Wi-Fi, input devices, recent `pmset` history |
-| `events.log` | filtered stream: `PMRD:` kernel power messages, WindowServer display wake/sleep, `airportd` wake reason, `bluetoothd` wake, VoodooI2C/PS2 initialisation |
+| `events.log` | filtered stream: `PMRD:` kernel power messages, WindowServer display wake/sleep, `airportd` wake reason, `bluetoothd` wake, `corebrightnessd` backlight state, VoodooI2C/PS2 initialisation |
 | `event-NNN-<hhmmss>.txt` | a state snapshot taken when a matched event appears (5 s minimum between snapshots) |
 | `backfill-NNN.log` | 3-minute `log show` window around a wake, to recover messages the live stream missed while suspended |
 
@@ -92,5 +92,18 @@ history:
   wake.
 
 A WindowServer coordinated-notification timeout and phantom display IDs
-(`3f003d`–`3f0043`) appear in the wake window; both are non-fatal. Not run on
-Sequoia yet.
+(`3f003d`–`3f0043`) appear in the wake window; both are non-fatal.
+
+## Status — Sequoia
+
+Sequoia 15.8.2 (24H232) was tested once with a 14 min lid sleep: it slept on
+`Clamshell Sleep` and woke on `PBTN/UserActivity`, display awake 1.4 s after
+wake, no reboot. Two differences from Sonoma:
+
+- sleep entry was blocked for 14.8 s by `System sleep prevented by
+  kPMCPUAssertion` (external USB media was mounted and the lid was closed 55 s
+  after boot), then completed;
+- the backlight returned at `52316` instead of `65403`.
+
+Only one Sequoia cycle has been captured. Overnight sleep and other sleep
+triggers are untested on both systems.

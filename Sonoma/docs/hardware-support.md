@@ -21,7 +21,7 @@ Verified on macOS Sonoma 14.8.9 (build 23J631).
 | Ethernet (RTL8111) | Working | RealtekRTL8111 |
 | Battery reporting | Partial | SMCBatteryManager present; not independently verified |
 | USB ports | Working | UTBMap (Dell-specific map) |
-| Sleep / wake | Untested | — |
+| Lid sleep / wake | Working | lid-close sleep and lid-open wake tested at 30 s, ~7 min and >10 min; every cycle slept on `Clamshell Sleep` and woke on `PBTN/UserActivity`; overnight sleep and hibernation not tested |
 | HDMI output | **Not working** | HDMI is wired to the NVIDIA dGPU, which is disabled; verified — connecting a TV detects no external display |
 | Webcam (incl. activity LED) | Working | native UVC, no kext — video works and the activity LED lights; microphone capture, FaceTime/conferencing and other resolutions not tested |
 | SD reader (Realtek RTS, PCIe) | Working | verified with a 4 GB FAT32 card — mounts via RealtekCardReader |
