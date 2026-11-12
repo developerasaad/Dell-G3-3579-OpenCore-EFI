@@ -51,7 +51,7 @@ MaciASL). The *concepts* transfer; the exact patches do not.
   will hide or mislabel ports. Generate your own with USBToolBox on the target
   machine (under Windows or macOS).
 - **SMBIOS identity** — generate your own; see
-  [SMBIOS and boot safety](smbios.md).
+  [SMBIOS and boot safety](../smbios.md).
 
 ## Rule of thumb
 

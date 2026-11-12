@@ -1,16 +1,20 @@
-# Dell G3 3579 Hackintosh
+# Dell G3 3579 Hackintosh — OpenCore EFI for macOS Sonoma 14.8.9 and Sequoia 15.8.2
 
 OpenCore EFI configurations for the **Dell G3 3579** (Intel Coffee Lake,
-i5-8300H / UHD 630), covering **macOS Sonoma 14** and **macOS Sequoia 15**.
+i5-8300H / UHD 630), tested on this laptop. Each macOS version has its own
+complete EFI and its own documentation; the two are not interchangeable.
 
-Each macOS version has its own complete EFI and its own documentation. The two
-are not interchangeable: Sequoia needs a different graphics backlight argument,
-and its Bluetooth depends on the USB map being loaded.
+The repository also carries reference material that applies beyond this
+machine: Coffee Lake and UHD 630 notes, I2C touchpad and SD reader details, a
+list of similar 2018 laptops, and the diagnostic tools used to bring Sequoia up.
 
-| OS | Directory |
-|----|-----------|
-| macOS Sonoma 14.8.9 (23J631) | [`Sonoma/`](Sonoma/README.md) |
-| macOS Sequoia 15.8.2 (24H232) | [`Sequoia/`](Sequoia/README.md) |
+| OS | Tested build | EFI |
+|---|---|---|
+| macOS Sonoma 14.8.9 | `23J631` | [`Sonoma/`](Sonoma/README.md) — OpenCore 1.0.8 RELEASE |
+| macOS Sequoia 15.8.2 | `24H232` | [`Sequoia/`](Sequoia/README.md) — OpenCore 1.0.9 RELEASE |
+
+No other macOS release has been tested. Do not read "Sonoma 14" or "Sequoia 15"
+as a claim about every patch release.
 
 ## Hardware
 
@@ -43,20 +47,39 @@ Full details: [hardware specifications](docs/hardware-specifications.md).
 | HDMI output | Not working | wired to the disabled NVIDIA dGPU (verified: no external display detected) |
 | SD reader | Working | Working |
 
-Per-OS details: [Sonoma](Sonoma/docs/hardware-support.md) ·
+Per-OS detail: [Sonoma](Sonoma/docs/hardware-support.md) ·
 [Sequoia](Sequoia/docs/hardware-support.md).
 
-## Shared references
+## Beyond this laptop
+
+- [Similar laptops](docs/compatibility/similar-laptops.md) — 2018 Coffee Lake-H
+  machines that share the platform, and what does or does not transfer.
+- [Intel Coffee Lake](docs/compatibility/coffee-lake.md) — laptop versus desktop,
+  what is reusable.
+- [Component reuse](docs/compatibility/component-reuse.md) — drivers versus
+  machine-specific ACPI and maps.
+- Component notes: [input](docs/components/input.md) ·
+  [audio](docs/components/audio.md) ·
+  [networking](docs/components/networking.md) ·
+  [SD reader](docs/components/sd-reader.md) ·
+  [USB mapping](docs/components/usb-mapping.md)
+
+Only the G3 3579 rows have been boot-tested. Everything else is hardware
+overlap, not a compatibility claim.
+
+## Documentation
 
 - [Hardware specifications](docs/hardware-specifications.md)
 - [Intel UHD 630](docs/intel-uhd-630.md)
-- [Component reuse on other machines](docs/component-reuse.md)
 - [Kext reference](docs/kext-reference.md)
 - [BIOS reference](docs/bios-reference.md)
 - [SMBIOS setup](docs/smbios.md)
 - [Development and debugging](docs/development.md)
-- [Diagnostic tools](tools/README.md) — optional boot-time collectors
-  and a guided microphone test
+- [Diagnostic tools](tools/README.md) — optional boot-time collectors and a
+  guided microphone test
+
+Installation is per OS: [Sonoma](Sonoma/docs/installation.md) ·
+[Sequoia](Sequoia/docs/installation.md).
 
 ## Credits
 
@@ -65,15 +88,16 @@ Acidanthera kexts (Lilu, WhateverGreen, VirtualSMC, AppleALC, BrightnessKeys,
 RestrictEvents), [VoodooI2C](https://github.com/VoodooI2C/VoodooI2C),
 [VoodooPS2](https://github.com/acidanthera/VoodooPS2),
 [OpenIntelWireless](https://github.com/OpenIntelWireless/itlwm),
-[USBToolBox](https://github.com/USBToolBox/kext), and
-[RealtekRTL8111](https://github.com/Mieze/RTL8111_driver_for_OS_X).
+[USBToolBox](https://github.com/USBToolBox/kext),
+[RealtekRTL8111](https://github.com/Mieze/RTL8111_driver_for_OS_X) and
+[RealtekCardReader](https://github.com/0xFireWolf/RealtekCardReader).
 Per-kext details: [kext reference](docs/kext-reference.md).
 
 ## License
 
 Original documentation is released under the MIT license (see `LICENSE`).
-The included kexts, ACPI binaries and OpenCore keep their own licenses —
-see [kext reference](docs/kext-reference.md).
+The included kexts, ACPI binaries and OpenCore keep their own licenses — see
+[kext reference](docs/kext-reference.md).
 
 ## Disclaimer
 

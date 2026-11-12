@@ -1,4 +1,4 @@
-# Installing macOS Sequoia 15 — Dell G3 3579
+# Installing macOS Sequoia 15.8.2 — Dell G3 3579
 
 This guide is for **Sequoia only**. For Sonoma, use
 [Sonoma installation](../../Sonoma/docs/installation.md).

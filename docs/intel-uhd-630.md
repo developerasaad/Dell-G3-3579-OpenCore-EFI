@@ -2,7 +2,8 @@
 
 Shared reference for the integrated GPU. OS-specific framebuffer/backlight
 settings live in each OS's `docs/configuration.md` and, for Sequoia,
-`Sequoia/docs/display-backlight.md`.
+`Sequoia/docs/display-backlight.md`. Platform-level reuse (laptop versus
+desktop, what transfers) is covered in [Coffee Lake](compatibility/coffee-lake.md).
 
 ## Device
 

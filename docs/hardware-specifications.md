@@ -65,3 +65,8 @@ Internal display: LG Display `LGD053F`, 1920×1080, eDP, connected to the iGPU
   is required or the boot disk will not appear.
 - The touchpad is I2C, not PS/2; it needs the GPIO/ACPI patches described in the
   per-OS configuration docs, not just the VoodooI2C kext.
+
+Component notes for adapting these parts elsewhere:
+[input](components/input.md) · [audio](components/audio.md) ·
+[networking](components/networking.md) · [SD reader](components/sd-reader.md) ·
+[USB mapping](components/usb-mapping.md).

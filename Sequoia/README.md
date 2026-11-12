@@ -1,4 +1,4 @@
-# macOS Sequoia 15 — Dell G3 3579
+# macOS Sequoia 15.8.2 — Dell G3 3579
 
 OpenCore configuration for **macOS Sequoia 15.8.2 (24H232)** on the Dell G3 3579.
 
@@ -28,6 +28,9 @@ vendor folders on your live EFI partition.
 Shared references: [hardware](../docs/hardware-specifications.md) ·
 [UHD 630](../docs/intel-uhd-630.md) · [kexts](../docs/kext-reference.md) ·
 [BIOS](../docs/bios-reference.md) · [SMBIOS](../docs/smbios.md)
+
+Beyond this machine: [similar laptops](../docs/compatibility/similar-laptops.md) ·
+[component reuse](../docs/compatibility/component-reuse.md).
 
 ## How Sequoia differs from Sonoma
 

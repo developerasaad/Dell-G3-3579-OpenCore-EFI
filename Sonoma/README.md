@@ -1,4 +1,4 @@
-# macOS Sonoma 14 — Dell G3 3579
+# macOS Sonoma 14.8.9 — Dell G3 3579
 
 OpenCore configuration for **macOS Sonoma 14.8.9 (23J631)** on the Dell G3 3579.
 
@@ -20,6 +20,9 @@ vendor folders on your live EFI partition.
 Shared references: [hardware](../docs/hardware-specifications.md) ·
 [UHD 630](../docs/intel-uhd-630.md) · [kexts](../docs/kext-reference.md) ·
 [BIOS](../docs/bios-reference.md) · [SMBIOS/safety](../docs/smbios.md)
+
+Beyond this machine: [similar laptops](../docs/compatibility/similar-laptops.md) ·
+[component reuse](../docs/compatibility/component-reuse.md).
 
 ## Feature summary
 
