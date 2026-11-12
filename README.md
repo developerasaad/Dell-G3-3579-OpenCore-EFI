@@ -8,13 +8,24 @@ The repository also carries reference material that applies beyond this
 machine: Coffee Lake and UHD 630 notes, I2C touchpad and SD reader details, a
 list of similar 2018 laptops, and the diagnostic tools used to bring Sequoia up.
 
-| OS | Tested build | EFI |
-|---|---|---|
-| macOS Sonoma 14.8.9 | `23J631` | [`Sonoma/`](Sonoma/README.md) — OpenCore 1.0.8 RELEASE |
-| macOS Sequoia 15.8.2 | `24H232` | [`Sequoia/`](Sequoia/README.md) — OpenCore 1.0.9 RELEASE |
+## Download EFI
+
+| macOS | Tested version | EFI download | Installation guide |
+|---|---|---|---|
+| Sonoma | 14.8.9 (`23J631`) | [Dell-G3-3579-Sonoma-14.8.9-EFI.zip](https://github.com/developerasaad/Dell-G3-3579-Hackintosh/releases/download/v1.0.0/Dell-G3-3579-Sonoma-14.8.9-EFI.zip) | [Sonoma guide](Sonoma/docs/installation.md) |
+| Sequoia | 15.8.2 (`24H232`) | [Dell-G3-3579-Sequoia-15.8.2-EFI.zip](https://github.com/developerasaad/Dell-G3-3579-Hackintosh/releases/download/v1.0.0/Dell-G3-3579-Sequoia-15.8.2-EFI.zip) | [Sequoia guide](Sequoia/docs/installation.md) |
+
+Both archives are in the [v1.0.0 release](https://github.com/developerasaad/Dell-G3-3579-Hackintosh/releases/tag/v1.0.0); each extracts to an `EFI/` folder. They ship the same disposable sample SMBIOS identity, so generate your own before signing in to Apple services — see [SMBIOS setup](docs/smbios.md).
+
+Per-OS overview: [Sonoma](Sonoma/README.md) · [Sequoia](Sequoia/README.md).
 
 No other macOS release has been tested. Do not read "Sonoma 14" or "Sequoia 15"
 as a claim about every patch release.
+
+Each installation guide covers two routes: **Online Recovery** — small download,
+internet required during installation, installs whatever Apple currently serves —
+and a **full offline installer**: large download, reusable, and the only way to
+reproduce an exact build. The guides compare them and walk through both.
 
 ## Hardware
 
