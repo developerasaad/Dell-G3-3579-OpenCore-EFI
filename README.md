@@ -1,5 +1,7 @@
 # Dell G3 3579 — OpenCore EFI for macOS Sonoma 14.8.9 and Sequoia 15.8.2
 
+[![Dell G3 3579 OpenCore EFI — macOS Sonoma and Sequoia](https://dell-g3-3579-opencore.developerasaad.indevs.in/assets/social-card.png)](https://dell-g3-3579-opencore.developerasaad.indevs.in/)
+
 OpenCore EFI configurations for the **Dell G3 3579** (Intel Coffee Lake,
 i5-8300H / UHD 630), tested on this laptop. Each macOS version has its own
 complete EFI and its own documentation; the two are not interchangeable.
