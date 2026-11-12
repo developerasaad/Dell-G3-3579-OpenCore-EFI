@@ -15,7 +15,7 @@ Verified on macOS Sonoma 14.8.9 (build 23J631).
 | Touchpad (I2C HID) | Working | VoodooI2C + VoodooI2CHID — pointer, gestures and scrolling fully tested |
 | Volume keys | Working | VoodooPS2 ADB codes |
 | Audio (ALC236, layout 15) | Working | AppleALC |
-| Microphone | Working | verified — but only at high input volume; see [microphone setup](#microphone-setup--set-input-volume-near-max) below |
+| Microphone | Working | verified — but only at high input volume; see [microphone setup](#microphone-setup-set-input-volume-near-max) below |
 | Wi-Fi (Intel AC 9462) | Working | AirportItlwm 2.3.0 |
 | Bluetooth (Intel) | Working | IntelBluetoothFirmware + BlueToolFixup |
 | Ethernet (RTL8111) | Working | RealtekRTL8111 |
@@ -29,7 +29,7 @@ Verified on macOS Sonoma 14.8.9 (build 23J631).
 
 See [configuration](configuration.md) for the settings behind these.
 
-## Microphone setup — set input volume near max
+## Microphone setup: set input volume near max
 
 The internal microphone works, but **not at the default input volume**. At the
 default 51 % it captures almost nothing — measured on this laptop, music playing

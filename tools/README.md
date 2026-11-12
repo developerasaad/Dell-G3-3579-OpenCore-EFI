@@ -137,7 +137,7 @@ replay the last recording. WAV files stay in `~/Desktop/mic-test-<timestamp>/`.
 
 On this laptop the microphone only produces a usable level at high input volume —
 documented ALC236 behaviour, not a fault. Setup steps and the measured table are
-in [Sonoma hardware support](../Sonoma/docs/hardware-support.md#microphone-setup--set-input-volume-near-max).
+in [Sonoma hardware support](../Sonoma/docs/hardware-support.md#microphone-setup-set-input-volume-near-max).
 
 ## Reading the results
 

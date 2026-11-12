@@ -45,4 +45,4 @@ slider to work.
 **Fix:** inject `layout-id = 15` on the HDA device (ALC236). Verified for
 speakers, headphones and the internal microphone. The microphone needs a high
 input volume — see the Sonoma
-[microphone setup](../../Sonoma/docs/hardware-support.md#microphone-setup--set-input-volume-near-max).
+[microphone setup](../../Sonoma/docs/hardware-support.md#microphone-setup-set-input-volume-near-max).

@@ -8,6 +8,8 @@ The repository also carries reference material that applies beyond this
 machine: Coffee Lake and UHD 630 notes, I2C touchpad and SD reader details, a
 list of similar 2018 laptops, and the diagnostic tools used to bring Sequoia up.
 
+**Documentation website:** [dell-g3-3579-opencore.pages.dev](https://dell-g3-3579-opencore.pages.dev/) — the same guides, organized for browsing, with search.
+
 ## Download EFI
 
 | macOS | Tested version | EFI download | Installation guide |

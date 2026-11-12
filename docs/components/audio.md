@@ -19,7 +19,7 @@ The internal microphone works on both systems but only at high input volume. At
 the default gain it is effectively silent — measured at −69 dBFS RMS with a
 sound source next to the machine, versus −38.9 dBFS at 100 %. Setup steps and
 the Sonoma measurements are in
-[Sonoma hardware support](../../Sonoma/docs/hardware-support.md#microphone-setup--set-input-volume-near-max).
+[Sonoma hardware support](../../Sonoma/docs/hardware-support.md#microphone-setup-set-input-volume-near-max).
 
 ## Reusing this on another laptop
 
