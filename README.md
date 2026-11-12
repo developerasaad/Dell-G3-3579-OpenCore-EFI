@@ -1,4 +1,4 @@
-# Dell G3 3579 Hackintosh — OpenCore EFI for macOS Sonoma 14.8.9 and Sequoia 15.8.2
+# Dell G3 3579 — OpenCore EFI for macOS Sonoma 14.8.9 and Sequoia 15.8.2
 
 OpenCore EFI configurations for the **Dell G3 3579** (Intel Coffee Lake,
 i5-8300H / UHD 630), tested on this laptop. Each macOS version has its own
@@ -8,16 +8,16 @@ The repository also carries reference material that applies beyond this
 machine: Coffee Lake and UHD 630 notes, I2C touchpad and SD reader details, a
 list of similar 2018 laptops, and the diagnostic tools used to bring Sequoia up.
 
-**Documentation website:** [dell-g3-3579-opencore.pages.dev](https://dell-g3-3579-opencore.pages.dev/) — the same guides, organized for browsing, with search.
+**Documentation Website:** [dell-g3-3579-opencore.developerasaad.indevs.in](https://dell-g3-3579-opencore.developerasaad.indevs.in/) — installation guides, hardware compatibility, and diagnostic tools.
 
 ## Download EFI
 
 | macOS | Tested version | EFI download | Installation guide |
 |---|---|---|---|
-| Sonoma | 14.8.9 (`23J631`) | [Dell-G3-3579-Sonoma-14.8.9-EFI.zip](https://github.com/developerasaad/Dell-G3-3579-Hackintosh/releases/download/v1.0.0/Dell-G3-3579-Sonoma-14.8.9-EFI.zip) | [Sonoma guide](Sonoma/docs/installation.md) |
-| Sequoia | 15.8.2 (`24H232`) | [Dell-G3-3579-Sequoia-15.8.2-EFI.zip](https://github.com/developerasaad/Dell-G3-3579-Hackintosh/releases/download/v1.0.0/Dell-G3-3579-Sequoia-15.8.2-EFI.zip) | [Sequoia guide](Sequoia/docs/installation.md) |
+| Sonoma | 14.8.9 (`23J631`) | [Dell-G3-3579-Sonoma-14.8.9-EFI.zip](https://github.com/developerasaad/Dell-G3-3579-OpenCore-EFI/releases/download/v1.0.0/Dell-G3-3579-Sonoma-14.8.9-EFI.zip) | [Sonoma guide](Sonoma/docs/installation.md) |
+| Sequoia | 15.8.2 (`24H232`) | [Dell-G3-3579-Sequoia-15.8.2-EFI.zip](https://github.com/developerasaad/Dell-G3-3579-OpenCore-EFI/releases/download/v1.0.0/Dell-G3-3579-Sequoia-15.8.2-EFI.zip) | [Sequoia guide](Sequoia/docs/installation.md) |
 
-Both archives are in the [v1.0.0 release](https://github.com/developerasaad/Dell-G3-3579-Hackintosh/releases/tag/v1.0.0); each extracts to an `EFI/` folder. They ship the same disposable sample SMBIOS identity, so generate your own before signing in to Apple services — see [SMBIOS setup](docs/smbios.md).
+Both archives are in the [v1.0.0 release](https://github.com/developerasaad/Dell-G3-3579-OpenCore-EFI/releases/tag/v1.0.0); each extracts to an `EFI/` folder. They ship the same disposable sample SMBIOS identity, so generate your own before signing in to Apple services — see [SMBIOS setup](docs/smbios.md).
 
 Per-OS overview: [Sonoma](Sonoma/README.md) · [Sequoia](Sequoia/README.md).
 
@@ -105,6 +105,12 @@ RestrictEvents), [VoodooI2C](https://github.com/VoodooI2C/VoodooI2C),
 [RealtekRTL8111](https://github.com/Mieze/RTL8111_driver_for_OS_X) and
 [RealtekCardReader](https://github.com/0xFireWolf/RealtekCardReader).
 Per-kext details: [kext reference](docs/kext-reference.md).
+
+## Contributing
+
+Hardware fixes and documentation corrections are welcome. See
+[CONTRIBUTING.md](CONTRIBUTING.md); report security issues per
+[SECURITY.md](SECURITY.md).
 
 ## License
 

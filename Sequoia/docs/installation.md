@@ -22,7 +22,7 @@ it serves whatever Sequoia build Apple currently offers for the board ID.
 ## Before you start
 
 - BIOS settings: [BIOS reference](../../docs/bios-reference.md)
-- The Sequoia EFI: [Dell-G3-3579-Sequoia-15.8.2-EFI.zip](https://github.com/developerasaad/Dell-G3-3579-Hackintosh/releases/download/v1.0.0/Dell-G3-3579-Sequoia-15.8.2-EFI.zip) or `Sequoia/EFI` in the repository — **keep `-igfxblr` in boot-args**, or the panel stays black ([display backlight](display-backlight.md))
+- The Sequoia EFI: [Dell-G3-3579-Sequoia-15.8.2-EFI.zip](https://github.com/developerasaad/Dell-G3-3579-OpenCore-EFI/releases/download/v1.0.0/Dell-G3-3579-Sequoia-15.8.2-EFI.zip) or `Sequoia/EFI` in the repository — **keep `-igfxblr` in boot-args**, or the panel stays black ([display backlight](display-backlight.md))
 - Your own SMBIOS identity: [SMBIOS setup](../../docs/smbios.md)
 - A backup of the current EFI and a way to boot without the internal disk
 - USB: 4 GB or more for Recovery, 16 GB or more for the full installer

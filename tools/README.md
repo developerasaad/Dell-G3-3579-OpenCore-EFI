@@ -1,6 +1,6 @@
 # Diagnostic tools
 
-Small collectors for troubleshooting a Hackintosh when the affected macOS
+Small collectors for troubleshooting macOS on this laptop when the affected
 installation cannot be used interactively — a panel that stays dark after boot,
 Bluetooth that never enumerates, a touchpad that feels wrong, or a microphone
 that seems dead.

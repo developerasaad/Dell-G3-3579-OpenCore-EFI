@@ -1,6 +1,6 @@
 # Security Policy
 
-This repository is a personal Hackintosh configuration, not a product. It is
+This repository is a personal OpenCore EFI configuration, not a product. It is
 maintained on a best-effort basis and carries no guarantee of updates or fixes.
 
 ## Supported configurations

@@ -23,7 +23,7 @@ necessarily 14.8.9.
 ## Before you start
 
 - BIOS settings: [BIOS reference](../../docs/bios-reference.md)
-- The Sonoma EFI: [Dell-G3-3579-Sonoma-14.8.9-EFI.zip](https://github.com/developerasaad/Dell-G3-3579-Hackintosh/releases/download/v1.0.0/Dell-G3-3579-Sonoma-14.8.9-EFI.zip) or `Sonoma/EFI` in the repository
+- The Sonoma EFI: [Dell-G3-3579-Sonoma-14.8.9-EFI.zip](https://github.com/developerasaad/Dell-G3-3579-OpenCore-EFI/releases/download/v1.0.0/Dell-G3-3579-Sonoma-14.8.9-EFI.zip) or `Sonoma/EFI` in the repository
 - Your own SMBIOS identity: [SMBIOS setup](../../docs/smbios.md)
 - A backup of the current EFI and a way to boot without the internal disk
 - USB: 4 GB or more for Recovery, 16 GB or more for the full installer
