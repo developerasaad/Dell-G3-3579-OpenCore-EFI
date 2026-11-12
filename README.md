@@ -55,7 +55,7 @@ Per-OS details: [Sonoma](Sonoma/docs/hardware-support.md) ·
 - [BIOS reference](docs/bios-reference.md)
 - [SMBIOS setup](docs/smbios.md)
 - [Development and debugging](docs/development.md)
-- [Diagnostic tools](tools/diagnostics/README.md) — optional boot-time collectors
+- [Diagnostic tools](tools/README.md) — optional boot-time collectors
   and a guided microphone test
 
 ## Credits

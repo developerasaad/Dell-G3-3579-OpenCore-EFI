@@ -17,12 +17,14 @@ prefs-export/
 reports/
 docs/archive/
 
-# diagnostic output (report files written by tools/diagnostics)
+# diagnostic output (report files written by tools/)
 hackdiag/
 i2cdiag-*.txt
 i2cdiag-history.log
 seqdiag-*.txt
 keycap-*.txt
+mic-test-*.wav
+tools/microphone/mic-test
 notes.log
 history.log
 SHA256SUMS

@@ -30,7 +30,7 @@ user's boot configuration in a public issue.
 In scope:
 
 - The `config.plist` files and kext/ACPI/driver selections in this repository
-- The diagnostic scripts and launchd jobs under `tools/diagnostics/`
+- The diagnostic scripts and launchd jobs under `tools/`
 
 Out of scope:
 
@@ -53,14 +53,14 @@ these EFIs should be aware of:
   what you add.
 - **The diagnostic scripts run as root.** Install them only during
   troubleshooting and remove them afterwards — see
-  [tools/diagnostics/README.md](tools/diagnostics/README.md). They collect
+  [tools/README.md](tools/README.md). They collect
   system state and logs, so review output before sharing it.
 - **SMBIOS identity is a sample and must be replaced.** Never publish a personal
   serial, MLB or ROM — see [docs/smbios.md](docs/smbios.md).
 
 ## Diagnostic data
 
-The tools under `tools/diagnostics/` capture kernel logs, NVRAM contents, and
+The tools under `tools/` capture kernel logs, NVRAM contents, and
 USB/Bluetooth state. They do not extract passwords or Apple account credentials,
 but `nvram` output can contain identifiers you may not want public. Sanitize any
 report before attaching it to an issue.

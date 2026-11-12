@@ -8,7 +8,7 @@ reports land on the Sequoia volume and can be read back from Sonoma without
 touching the broken display.
 
 The ready-to-use scripts and their launchd jobs are in
-[`tools/diagnostics/`](../../tools/diagnostics/README.md), with install,
+[`tools/`](../../tools/README.md), with install,
 configure and uninstall steps. Start there; this page only records the technique
 and the two results it produced on this machine.
 
