@@ -21,7 +21,7 @@ redistributing.
 | SMCLightSensor | 1.3.9 | Ambient light sensor | same repo |
 | SMCDellSensors | 1.3.9 | Dell-specific SMC sensors | same repo |
 | WhateverGreen | 1.7.2 | GPU framebuffer/backlight | [acidanthera/WhateverGreen](https://github.com/acidanthera/WhateverGreen) |
-| AppleALC | 1.9.9 | HDA audio (ALC236, layout 15) | [acidanthera/AppleALC](https://github.com/acidanthera/AppleALC) |
+| AppleALC | 1.9.9 | HDA audio (ALC236); layout 100 in the Sonoma EFI, 15 in Sequoia | [acidanthera/AppleALC](https://github.com/acidanthera/AppleALC) |
 | BrightnessKeys | 1.0.4 | ACPI brightness keys | [acidanthera/BrightnessKeys](https://github.com/acidanthera/BrightnessKeys) |
 | RestrictEvents | 1.1.7 | Restrict unsupported events | [acidanthera/RestrictEvents](https://github.com/acidanthera/RestrictEvents) |
 | VoodooPS2Controller | 2.3.8 | PS/2 keyboard | [acidanthera/VoodooPS2](https://github.com/acidanthera/VoodooPS2) |

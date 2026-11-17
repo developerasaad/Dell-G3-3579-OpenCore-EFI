@@ -14,8 +14,9 @@ Verified on macOS Sonoma 14.8.9 (build 23J631).
 | Keyboard (PS/2) | Working | VoodooPS2Controller |
 | Touchpad (I2C HID) | Working | VoodooI2C + VoodooI2CHID — pointer, gestures and scrolling fully tested |
 | Volume keys | Working | VoodooPS2 ADB codes |
-| Audio (ALC236, layout 15) | Working | AppleALC |
+| Audio (ALC236, layout 100) | Working | AppleALC 1.9.9, custom build bundled in this EFI |
 | Microphone | Working | verified — but only at high input volume; see [microphone setup](#microphone-setup-set-input-volume-near-max) below |
+| Headset microphone (CTIA, combo jack) | Working | layout 100 retasks pin `0x19` to Mic In; unplugging switches capture back to the internal microphone |
 | Wi-Fi (Intel AC 9462) | Working | AirportItlwm 2.3.0 |
 | Bluetooth (Intel) | Working | IntelBluetoothFirmware + BlueToolFixup |
 | Ethernet (RTL8111) | Working | RealtekRTL8111 |

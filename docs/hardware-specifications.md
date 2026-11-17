@@ -30,7 +30,7 @@ Internal display: LG Display `LGD053F`, 1920×1080, eDP, connected to the iGPU
 |------|-------|
 | Codec | Realtek ALC236 (`10EC:0236`) |
 | Controller | Intel `8086:A348` HDA |
-| AppleALC layout | 15 |
+| AppleALC layout | 100 (Sonoma EFI) / 15 (Sequoia EFI) |
 
 ## Network
 

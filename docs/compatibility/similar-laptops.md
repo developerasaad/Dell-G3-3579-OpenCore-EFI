@@ -55,8 +55,8 @@ not the EFI:
   re-derived from your own DSDT — see [input](../components/input.md).
 - The SD reader kext if your machine has a supported Realtek RTS controller —
   see [SD reader](../components/sd-reader.md).
-- Audio only if your codec matches; `layout-id 15` is specific to the ALC236
-  wiring here.
+- Audio only if your codec matches; the layouts shipped here are specific to this
+  ALC236 wiring.
 
 Nothing ACPI-related transfers: `SSDT-PNLF`, `SSDT-GPI0`, `SSDT-ALSD`,
 `SSDT-XOSI`, `SSDT-Disable_GPU_PEG0` and the five renames are written for this

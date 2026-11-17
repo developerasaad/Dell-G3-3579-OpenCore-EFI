@@ -43,7 +43,8 @@ MaciASL). The *concepts* transfer; the exact patches do not.
 
 - `AAPL,ig-platform-id`, `framebuffer-*`, and the EDID override are specific to
   this panel/GPU. Re-derive for other displays.
-- `layout-id 15` is specific to the ALC236 wiring here; other codecs/layouts differ.
+- `layout-id 100` (Sonoma) and `layout-id 15` (Sequoia) are specific to the ALC236
+  wiring here; other codecs/layouts differ.
 
 ## Machine-specific (never reuse)
 

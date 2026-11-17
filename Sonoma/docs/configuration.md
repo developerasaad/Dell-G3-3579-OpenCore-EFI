@@ -34,7 +34,8 @@ framebuffer-fbmem        00009000
 AAPL00,override-no-connect  <panel EDID>
 ```
 
-`PciRoot(0x0)/Pci(0x1f,0x3)` (HDA): `layout-id = 15` (ALC236).
+`PciRoot(0x0)/Pci(0x1f,0x3)` (HDA): `layout-id = 100` (ALC236; layout 100 is
+carried by the AppleALC build bundled in this EFI).
 
 ## PlatformInfo
 

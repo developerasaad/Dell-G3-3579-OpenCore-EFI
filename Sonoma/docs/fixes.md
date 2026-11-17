@@ -36,11 +36,16 @@ change BIOS settings for it.
 
 ## Audio layout
 
-**Cause:** macOS picks a default layout that doesn't match the ALC236 wiring.
+**Cause:** macOS picks a default layout that doesn't match the ALC236 wiring. The
+stock layouts map the combo jack's pin `0x19` as Line In, so a headset
+microphone never shows up as a capture device.
 
-**Fix:** inject `layout-id = 15` on `PciRoot(0x0)/Pci(0x1f,0x3)`. Verified for
-speakers, headphones and the internal microphone. The microphone only produces a
-usable signal at high input volume (see
+**Fix:** the AppleALC build bundled in this EFI carries layout 100, which retasks
+pin `0x19` to Mic In through ADC `0x23`; the internal microphone stays on pin
+`0x12` (ADC `0x24`). `layout-id = 100` is injected on
+`PciRoot(0x0)/Pci(0x1f,0x3)`. Verified for speakers, headphones, the internal
+microphone and a CTIA headset microphone. The internal microphone only produces
+a usable signal at high input volume (see
 [hardware support](hardware-support.md)); layout 5 is **not** correct for this
 codec.
 
